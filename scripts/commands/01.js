@@ -92,7 +92,7 @@ module.exports.run = async function ({ args, Users, Threads, api, event, Currenc
     ctx.beginPath();
 
 
-  ctx.drawImage(baseAvt1, 253, 55, 200, 200);
+  ctx.drawImage(baseAvt1, 253, 55, 200, 195);
 
   const imageBuffer = canvas.toBuffer();
   fs.writeFileSync(pathImg, imageBuffer);
