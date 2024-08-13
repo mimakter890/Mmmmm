@@ -34,7 +34,7 @@ try {
   var id = Object.keys(event.mentions)[0] || event.senderID;
   const canvas = Canvas.createCanvas(500, 670);
 	const ctx = canvas.getContext('2d');
-	const background = await Canvas.loadImage('https://i.imgur.com/rHmJSds.jpeg');
+	const background = await Canvas.loadImage('https://i.imgur.com/jHrYZ5Y.jpeg');
   
 	var avatar = await request.get(`https://graph.facebook.com/${id}/picture?width=512&height=512&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`);
 	avatar = await this.circle(avatar.body);
@@ -42,7 +42,7 @@ try {
 	ctx.drawImage(await Canvas.loadImage(avatar), 30, 469, 178, 178);
 	const imageBuffer = canvas.toBuffer();
 	fs.writeFileSync(path_toilet,imageBuffer);
-	 api.sendMessage({attachment: fs.createReadStream(path_toilet, {'highWaterMark': 128 * 1024}), body: "বলদ মেয়েদের চিপায় ধরা খাইছে😁😁"}, event.threadID, () => fs.unlinkSync(path_toilet), event.messageID);
+	 api.sendMessage({attachment: fs.createReadStream(path_toilet, {'highWaterMark': 128 * 1024}), body: "সব কয়টা বদল\nমাথায় গোবর ছাড়া কিছু নাই😁😁😁"}, event.threadID, () => fs.unlinkSync(path_toilet), event.messageID);
 }
 catch(e) {api.sendMessage(e.stack, event.threadID )}
   }
