@@ -94,12 +94,12 @@ module.exports.run = async function ({ args, Users, Threads, api, event, Currenc
   let ctx = canvas.getContext("2d");
   ctx.drawImage(baseImage, 0, 0, canvas.width, canvas.height);
   ctx.drawImage(baseAvt1, 132, 104, 148, 172);
-  ctx.drawImage(baseAvt2, 445, 105, 152, 172);
+  ctx.drawImage(baseAvt2, 445, 105, 153, 172);
   const imageBuffer = canvas.toBuffer();
   fs.writeFileSync(pathImg, imageBuffer);
   fs.removeSync(pathAvt1);
   fs.removeSync(pathAvt2);
-  return api.sendMessage({ body: `আসসালামু আলাইকুম, \n${name1}\n❤️❤️\n${name2}\nআই  ${tile}% লাব ইউ \n===== 𝐍𝐀𝐙𝐑𝐔𝐋 𝐁𝐎𝐓 =====`,
+  return api.sendMessage({ body: `আসসালামু আলাইকুম, \n${name1}\n❤️❤️💝+❤️❤️💝\n${name2}\nআই  ${tile}% লাব ইউ \n𝐂𝐫𝐞𝐚𝐭𝐨𝐫 ━➢ 𝐈𝐬𝐥𝐦𝐚𝐢𝐜𝐤 𝐂𝐡𝐚𝐭`,
             mentions: [{
           tag: `${name2}`,
           id: id2
